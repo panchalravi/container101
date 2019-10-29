@@ -11,10 +11,10 @@ VOLUME /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=./simplewebapp.jar
+ARG JAR_FILE=./greeter.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} simplewebapp.jar
+ADD ${JAR_FILE} greeter.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/simplewebapp.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/greeter.jar"]
